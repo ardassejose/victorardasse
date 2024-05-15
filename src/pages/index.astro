@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there 👋</div>
+    <div class="text-5xl font-bold">I'm Víctor Ardasse</div>
+    <div class="text-3xl py-3 font-bold">React Frontend Developer</div>
+    <div class="py-2">
+      <text class="text-lg">
+        Developer with <strong><u>3 years of experience</u></strong> and current focus on <strong>React.js/Angular</strong> and <strong>Java</strong>. I have a degree in Systems Analysis and Development and I am starting my postgraduate degree in Software Engineering and Architecture at FIA Online.
+        I help companies achieve success through innovative mobile and web solutions.
+        <br><br>
+        💼 During my professional journey, I have had the privilege of contributing significantly to renowned organizations, including Arizona Global, where I delivered exceptional results on several challenging projects.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="https://www.linkedin.com/in/ardassejose/" target="_blank"> Let's connect!</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="Nextmove: SPA Viewer"
+    img="/post_img1.jpg"
+    desc="Revisão online de conteúdos web de forma simples, direta e intuitivo na mesma página. Opção para mostrar banner em versão mobile e desktop."
+    url="#"
+    badge="FOSS"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Fullstack Week Trips: Find Your Next Trip!"
+    img="/post_img2.jpg"
+    desc="Projeto fullstack de agendamento, gerenciamento, pagamento e monitoramento de reservas."
+    url="https://fsw-trips-reservation.vercel.app/"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="C6 Fest - Edição 2024"
+    img="/post_img3.jpg"
+    desc="Landing page de divulgação do C6 Fest Edição 2024, o maior evento de música ao vivo de São Paulo!"
+    url="https://www.c6fest.com/line-up"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="BlowUp - Um sopro de diversão"
+    img="/post_img.webp"
+    desc="Página de divulgação do evento BlowUp! - Um sopro de diversão"
+    url="https://blowupbrasil.com.br/"
+    badge="WordPress"
+  />
+</BaseLayout>

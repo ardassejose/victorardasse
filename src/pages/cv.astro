@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Developer specialized in <strong>React.js and Java/Spring</strong>, mainly, <strong>3 years experienced</strong> and always improving and developing new skills.
+    <br><br>
+    Problem-solving, communication, teamwork and ability to learn new technologies quickly are my main skills
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Architecture and Systems Analysis and Development"
+      subtitle="2024 to 2025 at FIA ONLINE, São Paulo/SP, Brazil"
+    />
+    <TimeLineElement
+      title="Systems Analysis and Development"
+      subtitle="2022 to 2024 at Universidade Veiga de Almeida, Cabo Frio/RJ, Brazil"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Systems Developer Analyst – Remote"
+      subtitle="From 2022/Aug to at moment at Arizona Global, São Paulo/SP, Brazil"
+    >
+    - Improved the Web experience of emails, hotsites and backoffices of big players XP Investimentos, RICO Corretora and CLEAR Corretora, Bradesco, Banco PAN, resulting in <strong class="italic underline">30% engagement in campaigns</strong> and <strong class="italic underline">notable reduction in infrastructure</strong> costs using <strong>Java, Node. js, Javascript/Typescript, AWS/GCP.</strong>
+    <br><br>
+    - Led the microfrontend planning and architecture for Grupo Pão de Açúcar's monthly digital magazines, resulting in <strong class="italic underline">reduced page loading of offers</strong> and <strong class="italic underline">increased customer retention</strong> using Javascript/Typescript, Astro Builder, Java Spring, AWS, Docker.
+    
+    </TimeLineElement>
+    <TimeLineElement
+      title="Frontend Engineer – Self-employed"
+      subtitle="From 2023/Aug to 2024/Jan, Cabo Frio/RJ, Brazil"
+    >
+    Freelance work for independent projects such as: <br>
+    <ul class="list-disc mx-6">
+      <li>Hotsite event for C6 Fest - Edição 2024 with HTML, CSS/SCSS, JS;</li>
+      <li>Landing Page disclosure for Blow Up – Um sopro de Diversão with Wordpress/PHP;</li>
+      <li>Hotsite for Credit card machine Crediamigo - Banco do Nordeste with HTML, CSS/SCSS;</li>
+    </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a class="text-blue-500" href="https://cursos.alura.com.br/user/josevictorardasse" target="_blank">
+        Alura: +30 course certifications across React/Next.js, Java, AWS, Docker, Linux. SQL areas [link]
+      </a>
+    </li>
+    <li>
+      <a class="text-blue-500" href="https://drive.google.com/file/u/1/d/1UyB534um0kYALy4NxU-QOjo8_7W18p_d/view?usp=sharing" target="_blank">
+        Desenvolvimento Web Fullstack [link]
+      </a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>Ecmascript 6+</li>
+    <li>Typescript</li>
+    <li>React.js</li>
+    <li>Next.js</li>
+    <li>Zustand</li>
+    <li>Formik</li>
+    <li>Node.js</li>
+    <li>Java</li>
+    <li>Springboot</li>
+    <li>PostgreSQL</li>
+    <li>Docker</li>
+    <li>Cypress</li>
+    <li>Jest</li>
+    <li>Git</li>
+    <li>Figma</li>
+    <li>Adobe Photoshop</li>
+    <li>Google Web Designer</li>
+    <li>SCRUM</li>
+    <li>Kanban</li>
+  </ul>
+</BaseLayout>
